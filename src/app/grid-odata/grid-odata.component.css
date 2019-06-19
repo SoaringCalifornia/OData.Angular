@@ -1,0 +1,19 @@
+::ng-deep .dx-data-row {
+    font-size: 16pt;
+}
+
+::ng-deep .dx-box-item-content {
+    font-size: 16pt;
+}
+
+::ng-deep .dx-editor-cell .dx-texteditor-input {
+    font-size: 16pt;
+}
+
+::ng-deep .dx-field-item-label-location-left {
+    padding-right: 40px;
+}
+
+::ng-deep .dx-datagrid-content .dx-datagrid-table .dx-row>td, .dx-datagrid-content .dx-datagrid-table .dx-row>tr>td {
+    vertical-align: middle;
+}

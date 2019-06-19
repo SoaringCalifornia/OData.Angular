@@ -1,0 +1,6 @@
+{
+  "disableLogging": false,
+  "urlRoot": "http://localhost:4200/",
+  "urlOData": "https://localhost:44308/odata/",
+  "urlApi": "https://localhost:44308/api/"
+}

@@ -1,0 +1,77 @@
+<div fxLayout="column" class="full-screen-absolute page-frame">
+
+  <div fxLayout="row" class="panel-row" fxLayoutAlign="start center" class="dx-field" fxLayoutGap="10px">
+    <div>
+      <h3>{{title}}</h3>
+    </div>
+    <div>
+      <a [href]="urlOData" target="_blank">OData Web API metadata</a>
+    </div>
+    <div>
+      <a href="http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html" target="_blank">OData
+        Version 4.01 Protocol</a>
+    </div>
+    <div>
+      <a href="https://js.devexpress.com" target="_blank">DevExtreme by DevExpress</a>
+    </div>
+  </div>
+
+  <div fxLayout="row" class="panel-row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <div class="dx-field" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+      <div class="dx-field-label" fxLayout="row" fxFlex="grow">Apply throttle, secs</div>
+      <div class="dx-field-value" fxLayout="row">
+        <dx-number-box [width]="100" [showSpinButtons]="true" [(value)]="throttle" [min]="0" [max]="30">
+        </dx-number-box>
+      </div>
+      <dx-button text="Throttle" (onClick)="applyThrottle()" type="danger"></dx-button>
+      <dx-button text="Re-Seed Data" (onClick)="applySeed()" type="success"></dx-button>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxFlex="grow">
+    <dx-data-grid id="grid" (onToolbarPreparing)="onToolbarPreparing($event)" [dataSource]="source"
+      [columnAutoWidth]="true" [allowColumnReordering]="true" [allowColumnResizing]="true"
+      [rowAlternationEnabled]="true" [showBorders]="true" [paging]="{ paging: 'true', pageSize: 30 }" height="100%"
+      width="100%">
+
+      <dxo-load-panel [enabled]="true">
+      </dxo-load-panel>
+
+      <dxo-pager [showPageSizeSelector]="true" [showInfo]="true" [allowedPageSizes]="[10, 20, 30, 50, 100]"
+        [showNavigationButtons]="true">
+      </dxo-pager>
+
+      <dxo-group-panel [visible]="true"></dxo-group-panel>
+
+      <dxo-column-chooser [enabled]="true"></dxo-column-chooser>
+
+      <dxo-export [enabled]="true" fileName="Export" [allowExportSelectedData]="false"></dxo-export>
+
+      <dxo-filter-row visible="true"></dxo-filter-row>
+
+      <dxo-header-filter visible="true"></dxo-header-filter>
+
+      <dxo-editing mode="row" [allowAdding]="false" [allowUpdating]="true" [allowDeleting]="true" [useIcons]="true">
+      </dxo-editing>
+
+      <dxo-filter-panel [visible]="true">
+      </dxo-filter-panel>
+
+      <dxo-search-panel [visible]="true"></dxo-search-panel>
+
+      <dxi-column caption="Avatar" [hidingPriority]="2" [allowEditing]="false" [allowFiltering]="false"
+        [allowSorting]="false" [allowSearch]="false" cellTemplate="cellPhoto"></dxi-column>
+      <div *dxTemplate="let cell of 'cellPhoto'" [fxLayout]="row" fxLayoutAlign="center center">
+        <img class="img-round" [style.min-width.px]="50" [style.min-height.px]="50" [src]="cell.data.picture" />
+      </div>
+      <dxi-column caption="First Name" [hidingPriority]="2" dataField="first"></dxi-column>
+      <dxi-column caption="Last Name" [hidingPriority]="2" dataField="last"></dxi-column>
+      <dxi-column dataField="city" [hidingPriority]="1" [allowSearch]="false"></dxi-column>
+      <dxi-column dataField="state" [hidingPriority]="1" [allowSearch]="false"></dxi-column>
+      <dxi-column caption="Birth Date" [hidingPriority]="1" dataField="dob" dataType="date" [allowSearch]="false">
+      </dxi-column>
+      <dxi-column dataField="hobby" [hidingPriority]="0" [allowSearch]="false"></dxi-column>
+
+    </dx-data-grid>
+  </div>
+</div>

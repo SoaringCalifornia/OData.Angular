@@ -1,0 +1,21 @@
+.full-screen-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.page-frame {
+    padding: 5px;
+}
+
+.img-round {
+    border-radius: 50%;
+}
+
+.panel-row {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
