@@ -29,6 +29,9 @@ export class GridOdataComponent implements OnInit {
   public readonly urlOData = ConfigService.urlOData + '$metadata';
   public readonly urlApiManager = ConfigService.urlApi + 'manager/';
 
+  // Adjust number of records per page based on window size
+  public readonly settingsPaging = { paging: 'true', pageSize: window.innerHeight < 800 ? 10 : 30 };
+
   @ViewChild(DxDataGridComponent, { static: false })
   set grid(v: DxDataGridComponent) {
     this.dataGrid = v;

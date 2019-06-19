@@ -13,7 +13,7 @@
     <div class="dx-field" fxLayout="row nowrap" fxLayoutAlign="start center" fxLayoutGap="10px">
       <div>Apply throttle, secs</div>
       <div>
-        <dx-number-box [width]="100" [showSpinButtons]="true" [(value)]="throttle" [min]="0" [max]="30">
+        <dx-number-box [width]="120" [showSpinButtons]="true" [(value)]="throttle" [min]="0" [max]="30">
         </dx-number-box>
       </div>
     </div>
@@ -28,13 +28,12 @@
   <div fxLayout="row" fxFlex="grow">
     <dx-data-grid id="grid" (onToolbarPreparing)="onToolbarPreparing($event)" [dataSource]="source"
       [columnAutoWidth]="true" [allowColumnReordering]="true" [allowColumnResizing]="true"
-      [rowAlternationEnabled]="true" [showBorders]="true" [paging]="{ paging: 'true', pageSize: 30 }" height="100%"
-      width="100%">
+      [rowAlternationEnabled]="true" [showBorders]="true" [paging]="settingsPaging" height="100%" width="100%">
 
       <dxo-load-panel [enabled]="true">
       </dxo-load-panel>
 
-      <dxo-pager [showPageSizeSelector]="true" [showInfo]="true" [allowedPageSizes]="[10, 20, 30, 50, 100]"
+      <dxo-pager [showPageSizeSelector]="true" [showInfo]="true" [allowedPageSizes]="[5, 10, 20, 30, 50, 100]"
         [showNavigationButtons]="true">
       </dxo-pager>
 
