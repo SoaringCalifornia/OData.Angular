@@ -2,7 +2,7 @@
 
 See live web-site at https://alexandre.cloud deployed on Amazon Linux AMI EC2 instance running Apache.
 
-Web-site supports both descktop and mobile platforms and will adjust accordingly.
+Website supports both descktop and mobile platforms and will adjust accordingly.
 
 This projects consuming OData web-service available at https://api.alexandre.cloud/odata 
 Git https://github.com/SoaringCalifornia/OData.NETCore22
