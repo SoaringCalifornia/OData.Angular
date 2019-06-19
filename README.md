@@ -1,5 +1,16 @@
 # AngularOData
 
+See live web-site at https://alexandre.cloud deployed on Amazon Linux AMI EC2 instance running Apache.
+
+Web-site supports both descktop and mobile platforms and will adjust accordingly.
+
+This projects consuming OData web-service available at https://api.alexandre.cloud/odata 
+Git https://github.com/SoaringCalifornia/OData.NETCore22
+
+DevExtreme suite used for all UI work https://js.devexpress.com/
+
+## CLI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 ## Development server
