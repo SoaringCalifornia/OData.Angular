@@ -1,6 +1,6 @@
 # AngularOData
 
-See live web-site at https://alexandre.cloud deployed on Amazon Linux AMI EC2 instance running Apache.
+See live website at https://alexandre.cloud deployed on Amazon Linux AMI EC2 instance running Apache.
 
 Website supports both descktop and mobile platforms and will adjust accordingly.
 
