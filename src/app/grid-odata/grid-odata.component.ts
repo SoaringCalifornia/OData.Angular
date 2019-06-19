@@ -25,12 +25,12 @@ export class GridOdataComponent implements OnInit {
     }
   });
 
-  public readonly title = `Angular ${VERSION.full} OData Example using DevExtreme Grid`;
+  public readonly title = `Angular ${VERSION.full} OData`;
   public readonly urlOData = ConfigService.urlOData + '$metadata';
   public readonly urlApiManager = ConfigService.urlApi + 'manager/';
 
   @ViewChild(DxDataGridComponent, { static: false })
-  set pane(v: DxDataGridComponent) {
+  set grid(v: DxDataGridComponent) {
     this.dataGrid = v;
   }
 
@@ -49,15 +49,16 @@ export class GridOdataComponent implements OnInit {
     };
 
   ngOnInit() {
+    console.log('ngOnInit');
     this.refresh();
   }
 
   onToolbarPreparing(toolbar) {
+    console.log('onToolbarPreparing', toolbar);
     toolbar.toolbarOptions.items.unshift(
       this.toolbarRefresh
     );
   }
-
 
   refresh() {
     console.log('refresh');

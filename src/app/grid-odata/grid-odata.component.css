@@ -1,13 +1,13 @@
 ::ng-deep .dx-data-row {
-    font-size: 16pt;
+    font-size: 120%;
 }
 
 ::ng-deep .dx-box-item-content {
-    font-size: 16pt;
+    font-size: 120%;
 }
 
 ::ng-deep .dx-editor-cell .dx-texteditor-input {
-    font-size: 16pt;
+    font-size: 120%;
 }
 
 ::ng-deep .dx-field-item-label-location-left {
